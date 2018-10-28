@@ -1,0 +1,41 @@
+<!--pages/moresearch/index.wxml-->
+<import src="../../template/index.wxml" />
+<view class="page-container-nocenter">
+   <view class="select-click-view">
+      <view class="select-item-view" bindtap='getSelectEvent' data-kind="1">
+        <text class="select-text-choose" >综合排序</text>
+        <image src="/images/angle_down.png" class="select-image" />
+      </view>
+      <view class="select-item-view" bindtap='getSelectEvent' data-kind="2">
+        <text class="select-text" >距离最近</text>
+      </view>
+      <view class="select-item-view" bindtap='getSelectEvent' data-kind="3">
+        <text class="select-text" >销量最高</text>
+      </view>
+    </view>
+    <scroll-view scroll-y   scroll-with-animation="true" style="height:{{windowHeight}}px;" >
+      <template is="goodsSingItem" />
+      <template is="goodsSingItem" />
+      <template is="goodsSingItem" />
+      <template is="goodsSingItem" />
+      <template is="goodsSingItem" />
+      <template is="goodsSingItem" />
+    </scroll-view>
+    <block wx:if="{{isShowModal}}">
+    <view class="select-more-view-modal" style="height:{{modalHeight}}px" bindtap='closeModalEvent'>
+      <view class="select-more-view" bindtap='loadingShopList'>
+        <text class="select-more-text select-more-choose-text">综合排序</text>
+        <image class="select-more-image" src="/images/select_choose.png" />
+      </view>
+      <view class="select-more-view" bindtap='loadingShopList'>
+        <text class="select-more-text">评分最高</text>
+      </view>
+      <view class="select-more-view" bindtap='loadingShopList'>
+        <text class="select-more-text">配送最快</text>
+      </view>
+      <view class="select-more-view" bindtap='loadingShopList'>
+        <text class="select-more-text">配送最低</text>
+      </view>
+    </view>
+  </block>
+</view>

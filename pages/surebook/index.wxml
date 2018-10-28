@@ -1,0 +1,78 @@
+<!--pages/surebook/index.wxml-->
+<view class="page-container-nocenter">
+  <view class="sure-book-head-view">
+    <text class="sure-book-to-text">订单配送至：</text>
+    <view class="sure-book-address-view" bindtap='changeAddress' >
+      <image class="sure-book-address-icon" src="/images/location_btn.png" />
+      <text class="sure-book-address-text">浦东新区秀沿路888弄888号</text>
+      <image class="sure-book-address-right-row" src="/images/row_right.png" />
+    </view>
+    <view class="sure-book-people-view">
+       <text class="sure-book-people-text">徐小姐(女士)</text> 
+       <text class="sure-book-num-text">13188888888</text> 
+    </view>
+    <text class="sure-book-time-text">预计12:40送达</text> 
+  </view>
+  <view class="sepect-view"></view>
+  <view class="sure-book-shop-name-view">
+    <text class="sure-book-shop-name-text">肯德基(长泰广场店)</text>
+  </view>
+  <view class="sure-book-detail-view">
+    <view class="sure-book-detail-line-view">
+      <image class="sure-book-detail-image" src="/images/food_icon.png" />
+      <text class="sure-book-detail-name">叉烧拼烧鸭套餐</text>
+      <text class="sure-book-remark-text">1</text>
+      <text class="sure-book-remark-text">￥39.89</text>
+    </view>
+    <view class="sure-book-detail-line-view">
+      <view class="sure-book-detail-sign-view-yellow">
+        <text class="sure-book-detail-sign-text">包装</text>
+      </view> 
+      <text class="sure-book-detail-name">餐盒</text>
+      <text class="sure-book-remark-text">￥2</text>
+    </view>
+    <view class="sure-book-detail-line-view">
+      <view class="sure-book-detail-sign-view-zong">
+        <text class="sure-book-detail-sign-text">商家</text>
+      </view> 
+      <text class="sure-book-detail-name">配送费</text>
+      <text class="sure-book-remark-text">￥7.8</text>
+    </view>
+    <view class="sure-book-detail-line-view">
+      <view class="sure-book-detail-sign-view-fen">
+        <text class="sure-book-detail-sign-text">满减</text>
+      </view> 
+      <text class="sure-book-detail-name">在线支付立减</text>
+      <text class="sure-book-remark-reducer-text">-￥16</text>
+    </view>
+    <view class="sure-book-detail-line-view">
+      <view class="sure-book-detail-sign-view-green">
+        <text class="sure-book-detail-sign-text">优惠</text>
+      </view> 
+      <text class="sure-book-detail-name">红包</text>
+      <view class="sure-book-choose-redpag-view" bindtap='goToUseredbag'>
+        <text class="sure-book-choose-redpag-text">暂无可用红包</text>
+        <image class="sure-book-address-right-row" src="/images/row_right.png" />
+      </view>
+    </view>
+    <view class="sure-book-count-view">
+      <text class="sure-book-count-text">合计</text>
+      <text class="sure-book-count-money">￥33.69</text>
+    </view>
+  </view>
+  <view class="sepect-view"></view>
+  <view class="sure-book-remark-view" bindtap='clickRemarkEvent'>
+    <text class="sure-book-shop-name-text">备注</text>
+    <text class="sure-book-remark-desprtion">(有特殊需求可备注给商家)</text>
+    <image class="sure-book-address-right-row" src="/images/row_right.png" />
+  </view>
+  <view class="background-container" style="height:{{bottomHeight}}px"></view>
+  <view class="bottom-view">
+    <text class="bottom-view-money">￥33.69</text>
+    <view class="bottom-view-septect-view"></view>
+    <text class="bottom-view-remark">已优惠￥16</text>
+    <view class="bottom-view-btn-view">
+      <text class="bottom-view-btn-text">确认支付</text>
+    </view>
+  </view>
+</view>

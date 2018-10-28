@@ -1,0 +1,11 @@
+<!--pages/solection/index.wxml-->
+<import src="../../template/index.wxml" />
+<view class="page-container-nocenter"> 
+  <template is="solection" />
+  <view class="break-view">
+    <text class="bottom-remark">以下店铺超出配送</text>
+    <image class="bottom-image" src="/images/row_up.png"/>
+  </view>
+  <template is="solection" />
+  <template is="solection" />
+</view>

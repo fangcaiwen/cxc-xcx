@@ -1,0 +1,41 @@
+<!--pages/comment/index.wxml-->
+<view class="page-container-nocneter">
+  <view class="top-goods-view">
+    <image class="goods-image" src="/images/food_icon.png" />
+    <view class="right-view">
+      <text class="title-text">肯德基(上丰路店)</text>
+      <text class="title-remark">叉烧拼烧鸭双拼饭等4件商品</text>
+    </view>
+  </view>
+  <view class="middle-view">
+    <view class="row-view">
+      <text class="row-title-text">商品描述</text>
+      <view class="row-star-view">
+        <block wx:for="{{starList[0].star}}" wx:for-item="item" wx:key="key">
+          <image class="row-star" data-array="{{0}}"  data-index="{{index}}" bindtap='clickStarEvent' src="{{item?'/images/yellow_star.png':'/images/brey_star.png'}}" />
+        </block>
+      </view>
+      <text class="score-text">{{starList[0].score}}</text>
+    </view>
+     <view class="row-view">
+      <text class="row-title-text">快递服务</text>
+      <view class="row-star-view">
+        <block wx:for="{{starList[1].star}}" wx:for-item="item" wx:key="key">
+          <image class="row-star" data-array="{{1}}"  data-index="{{index}}" bindtap='clickStarEvent' src="{{item?'/images/yellow_star.png':'/images/brey_star.png'}}" />
+        </block>
+      </view>
+      <text class="score-text">{{starList[1].score}}</text>
+    </view>
+     <view class="row-view">
+      <text class="row-title-text">店铺评分</text>
+      <view class="row-star-view">
+        <block wx:for="{{starList[2].star}}" wx:for-item="item" wx:key="key">
+          <image class="row-star" data-array="{{2}}"  data-index="{{index}}" bindtap='clickStarEvent' src="{{item?'/images/yellow_star.png':'/images/brey_star.png'}}" />
+        </block>
+      </view>
+      <text class="score-text">{{starList[2].score}}</text>
+    </view>
+  </view>
+  <textarea class="textarea-style" placeholder='有话对我和快递小哥说的吗？' bindinput='inputChangeEvent'></textarea>
+  <button type="defaule" class="big-button button-other" bindtap='goToCommentEvent' >提交</button>
+</view>

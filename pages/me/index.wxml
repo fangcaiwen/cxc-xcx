@@ -1,0 +1,22 @@
+<!--pages/me/index.wxml-->
+<view class="page-container-nocenter">
+  <image class="me-background-image" src="/images/me_background_image.png" />
+  <view class="me-top-view">
+    <text class="me-top-number">131****8785</text>
+    <view class="me-top-bottom-view">
+      <view class="me-btn-view" bindtap='clickToSolection'>
+        <image class="me-btn-imageone" src="/images/me_solection.png"/>
+        <text class="me-btn-text">我的收藏</text>
+      </view>
+      <view class="me-btn-view" bindtap='clickToAddress'>
+        <image class="me-btn-imagetwo" src="/images/me_address.png"/>
+        <text class="me-btn-text">管理地址</text>
+      </view>
+      <view class="me-btn-view" bindtap='clickToRedPag'>
+        <image class="me-btn-imagethree" src="/images/me_redpag.png"/>
+        <text class="me-btn-text">我的红包</text>
+      </view>
+    </view>
+  </view>
+  <image class="me-image" src="/images/me_normal_headStr.png" bindtap='clickImageEvent' />
+</view>

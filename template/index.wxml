@@ -1,0 +1,309 @@
+<!--template/index.wxml-->
+<!--订单单项-->
+<template name="bookSingleItem">
+  <view class="template-bookitem-container" >
+    <image class="template-bookitem-shop-image" src="/images/shop_head_image.png" />
+    <view class="template-bookitem-right-container">
+      <view class="template-bookitem-line">
+        <view class="template-bookitem-first-left" bindtap='gotoEateryDetail'>
+          <text class="template-bookitem-shoptitle">肯德基（上丰路店）</text>
+          <image class="template-bookitem-shopimage" src="/images/row_right.png" />
+        </view>
+        <text class="template-bookitem-status">等待送达</text>
+      </view>
+      <text class="mdate">2018-09-28 12:30</text>
+      <view class="template-bookitem-line other">
+        <text class="template-bookitem-food">叉烧拼烧鸭双拼饭</text>
+        <text class="template-bookitem-money">￥35.98</text>
+      </view>
+      <view class="template-bookitem-button-view">
+        <button class="template-bookitem-button" bindtap='getAgainBuyEvent'>再来一单</button>
+        <button class="template-bookitem-button" bindtap='goToWriteComment'>立即评价</button>
+      </view>
+    </view>
+  </view>
+</template>
+
+<!--暂无数据-->
+<template name="noDataContainer">
+  <view class="noData-view">
+    <image class="noData-view-image" src="/images/nodata_image.png" />
+    <text class="noData-view-text">暂无数据</text>
+  </view>
+</template>
+
+<!--收藏单项-->
+<template name="solection">
+  <view class="solection-view" bindtap='clickSingleItem'>
+    <view class="solection-left-view">
+      <view class="solection-brand-view">
+        <text class="solection-brand-text">品牌</text>
+      </view>
+      <image class="solection-image" src="/images/shop_head_image.png" />
+    </view>
+    <view class="solection-left-right">
+      <text class="solection-shop-name">肯德基(上丰路店)</text>
+      <view class="solection-middle-remark">
+        <image class="solection-star" src="/images/yellow_star.png" />
+        <image class="solection-star" src="/images/yellow_star.png" />
+        <image class="solection-star" src="/images/yellow_star.png" />
+        <image class="solection-star" src="/images/yellow_star.png" />
+        <image class="solection-star" src="/images/brey_star.png" />
+        <text class="solection-score">4.0</text>
+        <text class="solection-sele-remark">月销售200单</text>
+      </view>
+      <text class="solection-shop-remark">￥20元起送</text>
+    </view>
+  </view>
+</template>
+
+<!--搜索框-->
+<template name="searchArea">
+  <view class="searchArea-view" bindtap="clickSearchBtnEvent">
+    <image class="search-btn" src="/images/search_btn.png" />
+    <text class="search-text">搜索</text>
+  </view>
+</template>
+
+<!--// 搜索框可以输入-->
+<template name="searchAreaInput">
+  <view class="searchArea-view" >
+    <image class="search-btn" src="/images/search_btn.png" />
+    <input class="search-input" value="{{searchText}}" placeholder='搜索' bindinput='inputtextChangeEvent' />
+  </view>
+</template>
+
+<!--首页按钮区-->
+<template name="homeBtnView">
+  <view class="homeBtnView-view">
+    <view class="homeBtnView-single-item" data-title="甜品饮品" bindtap='clickLunBoEvent'>
+      <image src="/images/home_btn/sweet_icon.png" class="icon-image" />
+      <text class="btn-remark">甜品饮品</text>
+    </view>
+    <view class="homeBtnView-single-item" data-title="商超便利" bindtap='clickLunBoEvent'>
+      <image src="/images/home_btn/super_icon.png" class="icon-image" />
+      <text class="btn-remark">商超便利</text>
+    </view>
+    <view class="homeBtnView-single-item" data-title="美食" bindtap='clickLunBoEvent'>
+      <image src="/images/home_btn/chiken_icon.png" class="icon-image" />
+      <text class="btn-remark">美食</text>
+    </view>
+    <view class="homeBtnView-single-item" data-title="简餐" bindtap='clickLunBoEvent'>
+      <image src="/images/home_btn/mian_icon.png" class="icon-image" />
+      <text class="btn-remark">简餐</text>
+    </view>
+  </view>
+  <view class="homeBtnView-view">
+    <view class="homeBtnView-single-item" data-title="新店特惠" bindtap='clickLunBoEvent'>
+      <image src="/images/home_btn/sela_icon.png" class="icon-image" />
+      <text class="btn-remark">新店特惠</text>
+    </view>
+    <view class="homeBtnView-single-item" data-title="准时达" bindtap='clickLunBoEvent'>
+      <image src="/images/home_btn/time_icon.png" class="icon-image" />
+      <text class="btn-remark">准时达</text>
+    </view>
+    <view class="homeBtnView-single-item" data-title="预定早餐" bindtap='clickLunBoEvent'>
+      <image src="/images/home_btn/moring_icon.png" class="icon-image" />
+      <text class="btn-remark">预定早餐</text>
+    </view>
+    <view class="homeBtnView-single-item" data-title="土豪推荐" bindtap='clickLunBoEvent'>
+      <image src="/images/home_btn/hao_icon.png" class="icon-image" />
+      <text class="btn-remark">土豪推荐</text>
+    </view>
+  </view>
+</template>
+
+<!--商品单项-->
+<template name="goodsSingItem">
+  <view class="goods-single-item-view" bindtap='clickSingleItemEvent'>
+
+    <view class="goods-single-item-left-view">
+      <view class="goods-single-item-brand-view">
+        <text class="goods-single-item-brand-text">品牌</text>
+      </view>
+      <image class="goods-single-item-image" src="/images/shop_head_image.png" />
+    </view>
+
+    <view class="goods-single-item-left-right">
+      <view class="goods-single-item-first-line">
+        <text class="goods-single-item-shop-name">肯德基(上丰路店)</text>
+        <view class="goods-single-item-bao-view">
+          <text class="goods-single-item-bao-text">保</text>
+        </view>
+      </view>
+      <view class="goods-single-item-middle-remark">
+        <image class="goods-single-item-star" src="/images/yellow_star.png" />
+        <image class="goods-single-item-star" src="/images/yellow_star.png" />
+        <image class="goods-single-item-star" src="/images/yellow_star.png" />
+        <image class="goods-single-item-star" src="/images/yellow_star.png" />
+        <image class="goods-single-item-star" src="/images/brey_star.png" />
+        <text class="goods-single-item-score">4.0</text>
+        <text class="goods-single-item-sele-remark">月销售200单</text>
+        <image src="/images/zsd_icon.png" class="goods-single-item-zsd-image" />
+      </view>
+      <view class="goods-single-item-middle-remark">
+        <text class="goods-single-item-shop-remark">￥20元起送</text>
+        <view class="goods-single-item-septer"></view>
+        <text class="goods-single-item-shop-remark-flex">配送费￥7.8</text>
+        <text class="goods-single-item-shop-remark">2.3km</text>
+        <view class="goods-single-item-septer"></view>
+        <text class="goods-single-item-score">30分钟</text>
+      </view>
+
+      <view class="goods-single-item-middle-remark">
+        <image src="/images/first_icon.png" class="goods-single-item-yellow-icon" />
+        <text class="goods-single-item-grey-text">新用户下单立减17元</text>
+        <image class="goods-single-item-up-icon" src="/images/row_up.png" />
+      </view>
+      <view class="goods-single-item-middle-remark">
+        <image src="/images/reducer_icon.png" class="goods-single-item-yellow-icon" />
+        <text class="goods-single-item-grey-text">满29减16，满59减30，满100减40</text>
+      </view>
+      <view class="goods-single-item-middle-remark">
+        <image src="/images/zhe_icon.png" class="goods-single-item-yellow-icon" />
+        <text class="goods-single-item-grey-text">部分商品6折起</text>
+      </view>
+    </view>
+  </view>
+</template>
+
+<!--商家详情头部-->
+<template name="shopDetailHead">
+  <view class="shop-detail-head-view">
+    <view class="shop-detail-head-left-view">
+      <image class="shop-detail-head-image" src="/images/shop_head_image.png" />
+    </view>
+    <view class="shop-detail-head-left-right">
+      <view class="shop-detail-head-first-line">
+        <view class="shop-detail-head-first-left">
+          <view class="shop-detail-head-brand-view">
+            <text class="shop-detail-head-brand-text">品牌</text>
+          </view>
+          <text class="shop-detail-head-shop-name">肯德基(上丰路店)</text>
+        </view>
+        <view class="shop-detail-head-solection-view" bindtap='solectionEvent'>
+          <image src="{{hasSolcetion?'/images/solection_yellow.png':'/images/solection_btn.png'}}" class="shop-detail-head-solection-image" />
+          <text class="shop-detail-head-solection-text">收藏</text>
+        </view>
+      </view>
+      <view class="shop-detail-head-middle-remark">
+        <image class="shop-detail-head-star" src="/images/yellow_star.png" />
+        <image class="shop-detail-head-star" src="/images/yellow_star.png" />
+        <image class="shop-detail-head-star" src="/images/yellow_star.png" />
+        <image class="shop-detail-head-star" src="/images/yellow_star.png" />
+        <image class="shop-detail-head-star" src="/images/brey_star.png" />
+        <text class="shop-detail-head-score">4.0</text>
+        <text class="shop-detail-head-sele-remark">月销售200单</text>
+      </view>
+      <view class="shop-detail-head-middle-remark">
+        <image src="/images/first_icon.png" class="shop-detail-head-yellow-icon" />
+        <text class="shop-detail-head-grey-text">新用户下单立减17元</text>
+      </view>
+      <view class="shop-detail-head-middle-remark">
+        <image src="/images/reducer_icon.png" class="shop-detail-head-yellow-icon" />
+        <text class="shop-detail-head-grey-text">满29减16，满59减30，满100减40</text>
+      </view>
+      <view class="shop-detail-head-middle-remark">
+        <image src="/images/zhe_icon.png" class="shop-detail-head-yellow-icon" />
+        <text class="shop-detail-head-grey-text">部分商品6折起</text>
+      </view>
+    </view>
+  </view>
+</template>
+
+<!--食物添加到购物车单项-->
+<template name="foodBuySingleItem">
+  <view class="food-buy-single-item-view">
+    <image class="food-buy-single-item-image" src="/images/food_icon.png" />
+    <view class="food-buy-single-item-right-view">
+      <text class="food-buy-single-item-food-name">{{name}}</text>
+      <view class="food-buy-single-item-remark">
+        <text class="food-buy-single-item-remark-text">月销售{{selllerMonth}}单</text>
+        <text class="food-buy-single-item-remark-text-other">好评率{{score}}</text>
+      </view>
+      <view class="food-buy-single-item-action-view">
+        <text class="food-buy-single-item-money">￥{{price}}</text>
+        <view class="food-buy-single-item-action-right-view">
+          <image class="food-buy-single-item-action-btn" bindtap='reduceNumEvent' data-index="{{index}}" data-key="{{key}}" data-price="{{price}}" src="/images/reducer_action.png" />
+          <text class="food-buy-single-item-num">{{buyNum}}</text>
+          <image class="food-buy-single-item-action-btn" bindtap='addNumEvent' data-index="{{index}}"  data-key="{{key}}" data-price="{{price}}"  src="/images/add_action.png" />
+        </view>  
+      </view>
+    </view>
+  </view>
+</template>
+
+<!--评论单项-->
+<template name="pingLunSingleItem">
+  <view class="ping-lun-single-item-view">
+    <image class="ping-lun-people-image" src="/images/me_normal_headStr.png" />
+    <view class="ping-lun-right-view">
+      <text class="ping-lun-name">李晓华</text>
+      <text class="ping-lun-content">我是评价内容我是评价内容我是评价内容我是评价内容我是评价内容我是评价内容我是评价内容</text>
+      <view class="ping-lun-image-view">
+        <image class="ping-lun-image" src="/images/food_icon.png" />
+        <image class="ping-lun-image" src="/images/food_icon.png" />
+        <image class="ping-lun-image" src="/images/food_icon.png" />
+      </view>
+    </view>
+  </view>
+</template>
+
+<!--红包单项-->
+<template name="redPagSingleItem">
+  <view class="red-pag-single-view">
+    <image class="red-pag-image" src="/images/red_pag_image.png" />
+    <view class="red-pag-view"> 
+        <view class="red-pag-left-view">
+          <text class="red-pag-money-text {{use?'':'red-pag-money-texted'}}">￥{{money}}</text>
+          <text class="red-pag-remark-text">满{{ifmoney}}元可用</text>
+        </view>
+        <view class="red-pag-middle-view">
+          <text class="red-pag-title-text">在线支付专享红包</text>
+          <text class="red-pag-remark-text">2018-10-11到期</text>
+          <text class="red-pag-remark-text">限收货手机号为13167178616</text>
+        </view>
+        <view class="red-pag-right-view">
+            <view class="red-pag-button {{use?'':'red-pag-buttoned'}}">
+              <text class="red-pag-action-text {{use?'':'red-pag-action-texted'}}">{{text}}</text>
+            </view>
+        </view>
+    </view>
+  </view>
+</template>
+
+<!--使用红包单项-->
+<template name="useRedPagSingleItem">
+  <view class="red-pag-single-view" bindtap='clickChooseEvent' data-index="{{index}}">
+    <image class="red-pag-image" src="/images/red_pag_image.png" />
+    <view class="red-pag-view"> 
+        <view class="red-pag-left-view">
+          <text class="red-pag-money-text ">￥{{money}}</text>
+          <text class="red-pag-remark-text">满{{ifmoney}}元可用</text>
+        </view>
+        <view class="red-pag-middle-view">
+          <text class="red-pag-title-text">在线支付专享红包</text>
+          <text class="red-pag-remark-text">2018-10-11到期</text>
+          <text class="red-pag-remark-text">限收货手机号为13167178616</text>
+        </view>
+        <view class="red-pag-right-view">
+           <image class="use-red-pag-check"  src="{{check?'/images/checked.png':'/images/uncheck.png'}}"/>  
+        </view>
+    </view>
+  </view>
+</template>
+<!--地址单项-->
+<template name="addressSingleItem">
+  <view class="address-view">
+    <view class="address-left-view">
+      <text class="address-text">{{address}}</text>
+      <view class="address-left-bottom-view">
+          <text class="address-name">{{name}}</text>
+          <text class="address-phone">{{phone}}</text>
+      </view>
+    </view>
+    
+    <image class="address-action-right-image" src="/images/row_right.png" wx:if='{{!choose}}' />
+    <image class="address-action-right-choose-image" src="{{check?'/images/checked.png':'/images/uncheck.png'}}" wx:if='{{choose}}' bindtap='checkClickEvent' data-index="{{index}}"  />
+  </view>
+</template>

@@ -1,0 +1,225 @@
+<!--pages/shopdetail/index.wxml-->
+<import src="../../template/index.wxml" />
+<view class="page-container-nocenter" >
+  <template is="shopDetailHead" data="{{hasSolcetion}}" />
+  <view class="sepect-view"></view>
+  <view class="shop-detail-middle-nav">
+    <view class="show-detail-middle-nav-view-contaier">
+      <view class="{{chooseKind==1?'shop-detail-middle-nav-item-view-choose':'shop-detail-middle-nav-item-view'}}" data-kind="1" bindtap='clickChooseEvent'>
+        <text class="shop-detail-middle-nav-item-text-choose">点菜</text>
+      </view>
+    </view>
+    <view class="show-detail-middle-nav-view-contaier">
+      <view class="{{chooseKind==2?'shop-detail-middle-nav-item-view-choose':'shop-detail-middle-nav-item-view'}}" data-kind="2" bindtap='clickChooseEvent'>
+        <text class="shop-detail-middle-nav-item-text">评论</text>
+      </view>
+    </view>
+    <view class="show-detail-middle-nav-view-contaier">
+      <view class="{{chooseKind==3?'shop-detail-middle-nav-item-view-choose':'shop-detail-middle-nav-item-view'}}" data-kind="3" bindtap='clickChooseEvent'>
+        <text class="shop-detail-middle-nav-item-text">商家</text>
+      </view>
+    </view>
+  </view>
+
+  <!--点菜区域-->
+  <block wx:if="{{chooseKind==1}}">
+    <view class="shop-detail-bottom-view">
+      <view class="shop-detail-bottom-left-view">
+        <block wx:for="{{foodList}}" wx:for-item="item" wx:key="idx">
+          <view class="shop-detail-food-kind-view {{foodKind==item.index?'shop-detail-food-kind-view-choose':''}}" data-foodKind="{{item.index}}" bindtap='chooseFoodKindEvent'>
+            <text class="{{foodKind==item.index?'shop-detail-food-kind-text-choose':'shop-detail-food-kind-text'}}">{{item.kindName}}</text>
+          </view>
+        </block>
+      </view>
+      <view class="shop-detail-bottom-right-view">
+        <scroll-view scroll-y bindscroll="scrollSlideEvent" scroll-with-animation="true" style="height:{{scrollwindowHeight}}px;" scroll-into-view="{{scrollIntoViewId}}">
+          <view class="shop-detail-food-title-view" id="scrollViewId0">
+            <image class="shop-detail-food-image" src="/images/hot_goods.png" />
+            <text class="shop-detail-food-title-text">热销商品</text>
+          </view>
+          <block wx:for="{{foodList[0].list}}" wx:for-item="item" wx:key="idx">
+            <template is="foodBuySingleItem" data="{{...item}}"/>
+          </block> 
+          <view class="shop-detail-food-title-view" id="scrollViewId1">
+            <image class="shop-detail-food-image" src="/images/boss_tj.png" />
+            <text class="shop-detail-food-title-text">老板推荐</text>
+          </view>
+          <block wx:for="{{foodList[1].list}}" wx:for-item="item" wx:key="idx">
+            <template is="foodBuySingleItem" data="{{...item}}"/>
+          </block> 
+          <view class="shop-detail-food-title-view" id="scrollViewId2">
+            <image class="shop-detail-food-image" src="/images/boss_tj.png" />
+            <text class="shop-detail-food-title-text">实惠套餐</text>
+          </view>
+         <block wx:for="{{foodList[2].list}}" wx:for-item="item" wx:key="idx">
+            <template is="foodBuySingleItem" data="{{...item}}"/>
+          </block> 
+          <view class="shop-detail-food-title-view" id="scrollViewId3">
+            <image class="shop-detail-food-image" src="/images/boss_tj.png" />
+            <text class="shop-detail-food-title-text">素菜</text>
+          </view>
+          <block wx:for="{{foodList[3].list}}" wx:for-item="item" wx:key="idx">
+            <template is="foodBuySingleItem" data="{{...item}}"/>
+          </block> 
+          <view class="shop-detail-food-title-view" id="scrollViewId4">
+            <image class="shop-detail-food-image" src="/images/boss_tj.png" />
+            <text class="shop-detail-food-title-text">荤菜</text>
+          </view>
+          <block wx:for="{{foodList[4].list}}" wx:for-item="item" wx:key="idx">
+            <template is="foodBuySingleItem" data="{{...item}}"/>
+          </block> 
+          <view class="shop-detail-food-title-view" id="scrollViewId5">
+            <image class="shop-detail-food-image" src="/images/boss_tj.png" />
+            <text class="shop-detail-food-title-text">主食</text>
+          </view>
+         <block wx:for="{{foodList[5].list}}" wx:for-item="item" wx:key="idx">
+            <template is="foodBuySingleItem" data="{{...item}}"/>
+          </block> 
+          <view class="shop-detail-food-title-view" id="scrollViewId6">
+            <image class="shop-detail-food-image" src="/images/boss_tj.png" />
+            <text class="shop-detail-food-title-text">饮料</text>
+          </view>
+          <block wx:for="{{foodList[6].list}}" wx:for-item="item" wx:key="idx">
+            <template is="foodBuySingleItem" data="{{...item}}"/>
+          </block> 
+        </scroll-view>
+      </view>
+    </view>
+  </block>
+
+  <!--评论区域-->
+  <block wx:if="{{chooseKind==2}}">
+   <scroll-view scroll-y   scroll-with-animation="true" style="height:{{scrollpLwindowHeight}}px;" >
+    <view class="comment-view">
+      <text class="comment-title">店铺综合评分4.8分</text>
+      <view class="comment-scroe-view">
+        <text class="comment-remark-text">描述相符</text>
+        <view class="comment-score-yellow"></view>
+        <text class="comment-score-text">4.7</text>
+      </view>
+      <view class="comment-scroe-view">
+        <text class="comment-remark-text">服务态度</text>
+        <view class="comment-score-yellow"></view>
+        <text class="comment-score-text">4.5</text>
+      </view>
+      <view class="comment-scroe-view">
+        <text class="comment-remark-text">快递服务</text>
+        <view class="comment-score-yellow"></view>
+        <text class="comment-score-text">5.0</text>
+      </view>
+      <view class="comment-kind-sign-view">
+        <view class="comment-kind-view" bindtap='commonLoading'>
+          <text class="comment-kind-text">全部</text>
+        </view>
+        <view class="comment-kind-view comment-kind-view-other" bindtap='commonLoading'>
+          <text class="comment-kind-text">满意</text>
+        </view>
+        <view class="comment-kind-view comment-kind-view-other" bindtap='commonLoading'>
+          <text class="comment-kind-text">有图</text>
+        </view>
+        <view class="comment-kind-view comment-kind-view-other" bindtap='commonLoading'>
+          <text class="comment-kind-text">味道好</text>
+        </view>
+        <view class="comment-kind-view comment-kind-view-no" bindtap='commonLoading'>
+          <text class="comment-kind-text">不满意</text>
+        </view>
+      </view>
+      <template is="pingLunSingleItem" />
+      <template is="pingLunSingleItem" />
+      <template is="pingLunSingleItem" />
+      </view> 
+    </scroll-view>
+  </block>
+
+  <!--商家区域-->
+  <block wx:if="{{chooseKind==3}}">
+    <view class="seller-view">
+      <text class="seller-title">商家信息</text>
+      <view class="seller-image-view-group">
+        <view class="seller-image-view">
+          <image class="seller-image" src="/images/shop_image.png" />
+          <text class="seller-image-text">店铺</text>
+        </view>
+        <view class="seller-image-view">
+          <image class="seller-image" src="/images/shop_zz_image.png" />
+          <text class="seller-image-text">营业执照</text>
+        </view>
+      </view>
+      <view class="seller-remark-view">
+        <text class="seller-remark-title">店铺名称</text>
+        <text class="seller-remark-info">肯德基</text>
+      </view>
+      <view class="seller-remark-view">
+        <text class="seller-remark-title">商家品类</text>
+        <text class="seller-remark-info">快餐</text>
+      </view>
+      <view class="seller-remark-view">
+        <text class="seller-remark-title">商家地址</text>
+        <text class="seller-remark-info">浦东新区秀沿路</text>
+      </view>
+      <view class="seller-remark-view">
+        <text class="seller-remark-title">商家电话</text>
+        <text class="seller-remark-info">021-55555666</text>
+      </view>
+      <view class="seller-remark-view">
+        <text class="seller-remark-title">营业时间</text>
+        <text class="seller-remark-info">9:00-18:00</text>
+      </view>
+    </view>
+  </block>
+  <block wx:if="{{chooseKind==1}}">
+    <view class="view-margin"></view>
+  </block>
+
+
+  <!--底部购物车区域-->
+  <block wx:if="{{chooseKind==1}}">
+    <view class="shop-car-view">
+      <view class="shop-car-image-view" bindtap='clickShopCarEvent'>
+        <image class="shop-car-image" src="/images/shop_car_icon.png"  />
+        <view class="shop-car-image-num-view">
+          <text class="shop-car-num-text">{{totalBuyFoodNum}}</text>
+        </view>
+      </view>
+      <view class="shop-car-remark-view">
+        <view calss="shop-car-remark-first-line-view">
+          <text class="shop-car-remark-title">{{totalBuyMoney>0?'￥'+totalBuyMoney:'未选购商品'}}</text>
+          <text class="shop-car-remark-text-delete">￥45.80</text>
+        </view>
+        <text class="shop-car-remark-text">另配送费3.3元</text>
+      </view>
+      <view class="shop-car-btn-view" bindtap='clickGoToSureEvent'>
+        <text class="shop-car-btn-text">确认订单</text>
+      </view>
+    </view>
+ </block> 
+
+  <!--购物车弹窗页面-->
+   <block wx:if="{{isShowShopCar}}">
+      <view class="shop-car-modal-view" style="height:{{modalHeight}}px" bindtap='closeModalEvent' catchtouchmove='true'>
+        <view class="reducer-view">
+          <text class="reducer-text">已减16元</text>
+        </view>
+        <view class="remark-top-view">
+           <text class="left-title">已选商品</text> 
+           <view class="right-view">
+              <image class="clear-icon-image" src="/images/clear_icon.png" />
+              <text class="clear-text">清空</text> 
+           </view>  
+        </view>
+        <view class="food-item-view-container">
+          <block  wx:for="{{hasChooseFoodList}}" wx:for-item="item" wx:key="idx">
+            <view class="food-item-view">
+              <text class="left-title">{{item.name}}</text>
+              <text class="money-text">￥{{item.price}}</text> 
+              <view class="action-right-view">
+                <image class="item-action-btn" src="/images/reducer_action.png" />
+                <text class="item-num">{{item.num}}</text>
+                <image class="item-action-btn" src="/images/add_action.png" />
+              </view> 
+            </view>
+          </block>  
+        </view>
+      </view>
+   </block>
+</view>

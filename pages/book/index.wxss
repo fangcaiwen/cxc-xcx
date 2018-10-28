@@ -1,0 +1,49 @@
+/* pages/book/index.wxss */
+@import "/template/index.wxss";
+.tab-nav {
+  height: 100rpx;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  line-height: 100rpx;
+  background: #fff;
+  font-size: 16px;
+  white-space: nowrap;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99;
+  border-bottom: 1rpx solid #e8e8ea;
+}
+
+.tab-item {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #666;
+}
+
+.tab-title {
+  width: 106rpx;
+  height: 100%;
+  text-align: center;
+}
+
+.tab-title.active {
+  color: #000;
+  border-bottom: 8rpx solid #ffda38;
+}
+
+.tab-content {
+  margin-top: 100rpx;
+  width: 100%;
+  height: 100%;
+  position:fixed;
+}
+
+.scoll-h {
+  height: 100%;
+}
+
+

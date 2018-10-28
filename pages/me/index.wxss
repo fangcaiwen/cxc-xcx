@@ -1,0 +1,62 @@
+/* pages/me/index.wxss */
+.me-background-image{
+  display: flex;
+  width: 100%;
+  height: 318rpx;
+}
+.me-top-view{
+  width: 674rpx;
+  height:342rpx;
+  position: absolute;
+  background-color: #ffffff;
+  margin-top: 80rpx;
+  border-radius: 10rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  box-shadow: 0px 2px 11px 0px #e8e8ea;
+}
+.me-top-number{
+  font-size: 18px;
+  color:#000000;
+  margin-top: 90rpx;
+}
+.me-top-bottom-view{
+  width:100%;
+  height:202rpx;
+  display: flex;
+  align-items: center;
+}
+.me-btn-view{
+  width: 120rpx;
+  height: 120rpx;
+  display: flex;
+  flex:1;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;  
+}
+.me-btn-imageone{
+  width: 44rpx;
+  height: 40rpx;
+}
+.me-btn-imagetwo{
+  width: 40rpx;
+  height: 44rpx;
+}
+.me-btn-imagethree{
+  width: 34rpx;
+  height: 42rpx;
+}
+.me-btn-text{
+  font-size: 14px;
+  color: #000000;
+  margin-top: 12rpx;
+}
+.me-image{
+  width: 120rpx;
+  height: 120rpx;
+  position: absolute;
+  top:10px;
+}

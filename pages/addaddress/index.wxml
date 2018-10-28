@@ -1,0 +1,30 @@
+<!--pages/addaddress/index.wxml-->
+<view class="page-container-nocneter">
+  <view class="row-view">
+    <text class="row-title">联系人</text>
+    <input placeholder='姓名' class="row-content"></input>
+  </view>
+  <view class="row-view">
+     <text class="row-title"></text>
+     <view class="{{sex==1?'sex-view':'sex-view-chooseed'}}" data-sex="1" bindtap='clickChooseSex'>
+        <text class="{{sex==1?'sex-text':'sex-text-chooseed'}}">先生</text>
+     </view>
+     <view class="{{sex==2?'sex-view':'sex-view-chooseed'}}" data-sex="2" bindtap='clickChooseSex'>
+        <text class="{{sex==2?'sex-text':'sex-text-chooseed'}}">女士</text>
+     </view>
+  </view>
+  <view class="row-view">
+    <text class="row-title">电话</text>
+    <input placeholder='手机号码' class="row-content"></input>
+  </view>
+  <view class="row-view">
+    <text class="row-title">地址</text>
+    <input class="row-content" placeholder='填写收货地址' value='{{address}}' maxlength='20'></input>
+    <image class="choose-address-icon" src="/images/location_btn.png" bindtap='clickChooseAddress' />
+  </view>
+  <view class="row-view">
+    <text class="row-title">门牌号</text>
+    <input placeholder='例:5号楼201室' class="row-content"></input>
+  </view>
+  <button type="defaule" class="big-button button-other" bindtap='submitEvent' >确定</button>
+</view>

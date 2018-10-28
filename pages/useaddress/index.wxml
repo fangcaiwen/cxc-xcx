@@ -1,0 +1,12 @@
+<!--pages/useaddress/index.wxml-->
+<import src="../../template/index.wxml" />
+<view class="page-container-nocneter"> 
+  <block wx:for="{{list}}" wx:for-item="item" wx:key="idx">
+    <template is="addressSingleItem"  data="{{...item}}"/>
+  </block>
+  <view class="buttom-view" bindtap='clickToAddAddress'>
+    <image class="add-image" src="/images/add_icon.png" />
+    <text class="add-text">新增地址</text>
+  </view>  
+</view>
+

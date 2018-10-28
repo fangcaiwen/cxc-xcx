@@ -1,0 +1,78 @@
+/* pages/comment/index.wxss */
+.top-goods-view{
+  display: flex;
+  height: 102rpx;
+  flex:1;
+  margin-left: 30rpx;
+  margin-right: 30rpx;
+  margin-top: 30rpx;
+}
+.goods-image{
+  width: 102rpx;
+  height: 102rpx;
+}
+.right-view{
+  display: flex;
+  flex:1;
+  justify-content: space-between;
+  flex-direction: column;
+  margin-left: 24rpx;
+}
+.title-text{
+  font-size: 15px;
+  color:#000000;
+}
+.title-remark{
+  font-size: 14px;
+  color:#666666;
+}
+.middle-view{
+  display: flex;
+  flex:1;
+  flex-direction: column;
+  margin-left: 30rpx;
+  margin-right: 30rpx;
+  margin-top: 40rpx;
+  box-sizing: border-box;
+}
+.row-view{
+  display: flex;
+  flex:1;
+  align-items: center;
+  margin-bottom: 20rpx;
+}
+.row-title-text{
+  font-size: 14px;
+  color:#333333;
+}
+.row-star-view{
+  display: flex;
+  margin-left: 50rpx;
+  margin-right: 20rpx;
+}
+.row-star{
+  width: 40rpx;
+  height: 40rpx;
+  margin-right: 30rpx;
+}
+.score-text{
+  font-size: 14px;
+  color:#ff5501;
+}
+.textarea-style{
+  display: flex;
+  width: 690rpx;
+  height:268rpx;
+  margin-left: 30rpx;
+  margin-right: 30rpx;
+  margin-top: 50rpx;
+  box-sizing: border-box;
+  border: 1rpx solid #cccccc;
+  border-radius: 4rpx;
+  padding: 16rpx;
+  font-size: 14px;
+}
+.button-other{
+  margin-top: 40rpx;
+  width: 690rpx;
+}

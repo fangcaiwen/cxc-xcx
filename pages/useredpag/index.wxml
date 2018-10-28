@@ -1,0 +1,12 @@
+<!--pages/useredpag/index.wxml-->
+<import src="../../template/index.wxml" />
+<view class="top-view">
+  <text class="left-text">已为您筛选出可用红包</text>
+  <text class="right-text">不使用</text>
+  <image class="right-image" src="{{isUseRedPag?'/images/uncheck.png':'/images/checked.png'}}" bindtap='doUseRedPagEvent'/>
+</view>
+<view class="page-container-nocenter" style="background-color:#f0eff5"> 
+  <block  wx:for="{{list}}" wx:for-item="item" wx:key="idx">
+    <template is="useRedPagSingleItem" data="{{...item}}"/>
+  </block>
+</view>

@@ -1,0 +1,31 @@
+<!--pages/remark/index.wxml-->
+<view class="page-container-nocenter">
+  <view class="remark-view">
+    <text class="remark-title">口味偏好</text>
+    <textarea class="textarea-view" placeholder='请填写对商家和骑手小哥的话' ></textarea>
+    <text class="remark-title">餐具份数</text>
+    <view class="remark-sign-view">
+      <view class="remark-single-item-view-choose">
+        <text class="remark-single-item-text">1份</text>
+      </view>
+      <view class="remark-single-item-view">
+        <text class="remark-single-item-text">2份</text>
+      </view>
+      <view class="remark-single-item-view">
+        <text class="remark-single-item-text">3份</text>
+      </view>
+      <view class="remark-single-item-view">
+        <text class="remark-single-item-text">4份</text>
+      </view>
+      <view class="remark-single-item-view-zdy">
+        <text class="remark-single-item-text">自定义</text>
+      </view>
+    </view>
+    <view class="remark-fp-view">
+        <text class="remark-fp-title">发票</text>
+        <text class="remark-fp-remark">(满100元可开发票)</text>
+    </view>
+    <textarea class="textarea-view" placeholder='请填写发票信息' ></textarea>
+    <button type="defaule" class="big-button button-other" bindtap='submitEvent' >确定</button>
+  </view>
+</view>

@@ -1,0 +1,224 @@
+/* pages/surebook/index.wxss */
+.sure-book-head-view{
+  width:100%;
+  height:274rpx;
+}
+.sure-book-to-text{
+  font-size: 15px;
+  color:#333333;
+  margin-top: 32rpx;
+  margin-left: 30rpx;
+  display: inline-block;
+}
+.sure-book-address-view{
+  display: flex;
+  margin-left: 30rpx;
+  margin-right: 30rpx;
+  margin-top: 20rpx;
+  align-items: center;
+}
+.sure-book-address-icon{
+  width:24rpx;
+  height:33rpx;
+}
+.sure-book-address-text{
+  font-size: 18px;
+  color: #000000;
+  margin-left: 20rpx;
+  flex:1;
+}
+.sure-book-address-right-row{
+  width:14rpx;
+  height:24rpx;
+}
+.sure-book-people-view{
+  margin-left: 74rpx;
+}
+.sure-book-people-text{
+  font-size: 14px;
+  color:#000000;
+}
+.sure-book-num-text{
+  font-size: 14px;
+  color:#000000;
+  margin-left: 30rpx;
+}
+.sure-book-time-text{
+  font-size: 14px;
+  color:#ff5501;
+  margin-left: 74rpx;
+  margin-top: 20rpx;
+}
+.sepect-view{
+  width: 100%;
+  height:20rpx;
+  background-color: #eeeeee;
+}
+.sure-book-shop-name-view{
+  width:100%;
+  height:96rpx;
+  display: flex;
+  align-items: center;
+  padding-left: 30rpx;
+  box-sizing: border-box;
+  border-bottom: 1rpx solid #e8e8ea;
+}
+.sure-book-shop-name-text{
+  font-size: 16px;
+  color: #000000;
+}
+.sure-book-detail-view{
+  width: 100%;
+  height:500rpx;
+}
+.sure-book-detail-line-view{
+  display: flex;
+  margin-left: 30rpx;
+  margin-right: 30rpx;
+  margin-top: 30rpx;
+  align-items: center;
+}
+.sure-book-detail-image{
+  width:90rpx;
+  height:90rpx;
+}
+.sure-book-detail-name{
+  font-size: 14px;
+  flex:1;
+  color:#000000;
+  margin-left: 20rpx;
+}
+.sure-book-remark-text{
+  font-size: 14px;
+  color:#000000;
+  margin-left: 60rpx;
+}
+.sure-book-detail-sign-view-yellow{
+  width: 90rpx;
+  height:32rpx;
+  border-radius: 2px;
+  background-color: #f8be19;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.sure-book-detail-sign-text{
+  font-size: 10px;
+  color:#ffffff;
+}
+.sure-book-detail-sign-view-zong{
+  width: 90rpx;
+  height:32rpx;
+  border-radius: 2px;
+  background-color: #DFC089;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.sure-book-detail-sign-view-fen{
+  width: 90rpx;
+  height:32rpx;
+  border-radius: 2px;
+  background-color: #FCAC75;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.sure-book-detail-sign-view-green{
+  width: 90rpx;
+  height:32rpx;
+  border-radius: 2px;
+  background-color: #7ED321;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.sure-book-remark-reducer-text{
+  font-size: 14px;
+  color:#FF5501;
+}
+.sure-book-choose-redpag-view{
+  display: flex;
+  align-items: center;
+}
+.sure-book-choose-redpag-text{
+  color:#999999;
+  font-size: 14px;
+  margin-right: 12rpx;
+}
+.sure-book-count-view{
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 30rpx;
+  margin-top: 40rpx;
+  margin-bottom: 30rpx;
+}
+.sure-book-count-text{
+  font-size: 14px;
+  color:#333333;
+}
+.sure-book-count-money{
+  font-size: 15px;
+  color:#ff5501;
+  margin-left: 10rpx;
+}
+.sure-book-remark-view{
+  width:100%;
+  height:96rpx;
+  display: flex;
+  align-items: center;
+  padding-left: 30rpx;
+  padding-right: 30rpx;
+  box-sizing: border-box;
+}
+.sure-book-remark-desprtion{
+  color:#2a2a2a;
+  font-size: 12px;
+  flex:1;
+}
+.background-container{
+  width:100%;
+  background-color: #eeeeee;
+  display: flex;
+}
+.bottom-view{
+  width:100%;
+  height:96rpx;
+  position: fixed;
+  background-color: #ffffff;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  border-top: 1rpx solid #dddddd;
+}
+.bottom-view-money{
+  font-size: 18px;
+  color:#ff5501;
+  margin-left: 30rpx;
+  margin-right: 20rpx;
+}
+.bottom-view-septect-view{
+  width:2rpx;
+  height:46rpx;
+  background-color: #cccccc;
+}
+.bottom-view-remark{
+  font-size: 14px;
+  color:#666666;
+  flex:1;
+  margin-left: 20rpx;
+}
+.bottom-view-btn-view{
+  width:236rpx;
+  height:70rpx;
+  background:linear-gradient(to right, #ffe140 , #ffcc01);
+  border-radius: 35rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 30rpx;
+}
+.bottom-view-btn-text{
+  font-size: 14px;
+  color:#000000;
+}

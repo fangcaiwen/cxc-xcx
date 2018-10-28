@@ -1,0 +1,46 @@
+/* pages/login/index.wxss */
+.head-image{
+  width: 130rpx;
+  height:130rpx;
+  margin-top: 60rpx;
+  margin-bottom: 30rpx;
+}
+.title-text{
+  font-size: 40rpx;
+  color: #000000;
+  margin-bottom: 60rpx;
+}
+.number-input{
+  width: 522rpx;
+  height: 96rpx;
+  border: 1rpx solid #dddddd;
+  border-radius: 10rpx;
+  font-size: 32rpx;
+  padding-left: 34rpx;
+  padding-right: 34rpx;
+}
+.code-input-view{
+  width: 522rpx;
+  height: 96rpx;
+  border: 1rpx solid #dddddd;
+  border-radius: 10rpx;
+  font-size: 32rpx;
+  padding-left: 34rpx;
+  padding-right: 34rpx;
+  margin-top: 30rpx;
+  margin-bottom: 50rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.code-input{
+  flex:1;
+}
+.code-get-btn{
+  border-left: 2rpx solid #eeeeee;
+  height: 60rpx;
+  padding-left: 30rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

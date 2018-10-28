@@ -1,0 +1,11 @@
+<!--pages/login/index.wxml-->
+<view class="page-container-nocenter">
+  <image class="head-image" src="/images/me_normal_headStr.png" />
+  <text class="title-text">登录/注册</text>
+  <input class='number-input' maxlength='11' type="number" value="{{phone}}" placeholder='请输入手机号' bindinput='listenPhoneInput' />
+  <view class="code-input-view">
+    <input class="code-input" maxlength='6' type="number" value="{{code}}" placeholder='请输入验证码' bindinput='listenCodeInput' />
+    <text class="code-get-btn" bindtap='getCodeEvent'>获取验证码</text>
+  </view>
+  <button type="defaule" class="big-button" bindtap='loginEvent'>立即登录</button>
+</view>

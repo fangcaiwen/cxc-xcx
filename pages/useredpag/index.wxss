@@ -1,0 +1,28 @@
+/* pages/useredpag/index.wxss */
+@import "/template/index.wxss";
+.top-view{
+  width: 100%;
+  height: 102rpx;
+  box-sizing: border-box;
+  padding-left: 30rpx;
+  padding-right: 30rpx;
+  align-items: center;
+  display: flex;
+}
+page{
+  background: #f0eff5;
+}
+.left-text{
+  flex:1;
+  font-size: 15px;
+  color:#000000;
+}
+.right-text{
+  font-size: 15px;
+  color:#000000;
+}
+.right-image{
+  width: 40rpx;
+  height: 40rpx;
+  margin-left: 14rpx;
+}

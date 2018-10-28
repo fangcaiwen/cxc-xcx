@@ -1,0 +1,5 @@
+/* pages/redpag/index.wxss */
+@import "/template/index.wxss";
+page{
+  background: #f0eff5;
+}

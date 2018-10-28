@@ -1,0 +1,7 @@
+<!--pages/redpag/index.wxml-->
+<import src="../../template/index.wxml" />
+<view class="page-container-nocenter" style="background-color:#f0eff5;margin-top:20rpx"> 
+  <block  wx:for="{{list}}" wx:for-item="item" wx:key="idx">
+    <template is="redPagSingleItem" data="{{...item}}"/>
+  </block>
+</view>

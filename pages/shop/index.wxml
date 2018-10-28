@@ -1,0 +1,75 @@
+<!--pages/shop/index.wxml-->
+<import src="../../template/index.wxml" />
+<view class="page-container-nocenter"> 
+  <scroll-view scroll-y bindscroll="scrollSlideEvent" scroll-with-animation="true" style="height:{{windowHeight}}px;" scroll-into-view="{{scrollIntoViewId}}">
+    <view class="shop-head-view" id="topView">
+      <image class="shop-location-btn" src="/images/location_btn.png" />
+      <text class="shop-location-address" bindtap='getLocationEvent'>{{addressLocation}}</text>
+      <image class="shop-location-row" src="/images/row_down.png"  />
+      <view class="searchArea-container-view">
+        <template is="searchArea" />
+      </view>
+    </view>
+    <view class="lunbo-view">
+      <view class="lunbo-margin"></view>
+      <swiper class="swiper-container" indicator-dots="{{indicatorDots}}" indicator-color="#cccccc" indicator-active-color="#ffb53b" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+          <block wx:for="{{imgUrls}}" wx:key="index">
+            <swiper-item>
+              <image src="{{item}}" class="slide-image" bindtap='clickLunBoEvent' />
+            </swiper-item>  
+          </block>
+      </swiper>
+      <view class="lunbo-margin"></view>
+    </view>
+
+    <view class="home-btn-lunbo-view">
+      <view class="home-btn-lunbo-margin"></view>
+      <swiper class="home-btn-swiper-container" indicator-dots="{{indicatorDots}}" indicator-color="#cccccc" indicator-active-color="#ffb53b"  interval="{{interval}}" duration="{{duration}}">
+          <block wx:for="{{homeBtns}}" wx:key="index">
+            <swiper-item>
+               <template is="homeBtnView" />
+            </swiper-item>  
+          </block>
+      </swiper>
+      <view class="lunbo-margin"></view>
+    </view>
+    <view class="sepect-view"></view>
+    <view class="select-click-view {{navFixed?'fixed-on-top':''}}" id="selectViewId" >
+      <view class="select-item-view" bindtap='getSelectEvent' data-kind="1">
+        <text class="{{selectTab==1?'select-text-choose':'select-text'}}" >综合排序</text>
+        <image src="/images/angle_down.png" class="select-image" />
+      </view>
+      <view class="select-item-view" bindtap='getSelectEvent' data-kind="2">
+        <text class="{{selectTab==2?'select-text-choose':'select-text'}}" >距离最近</text>
+      </view>
+      <view class="select-item-view" bindtap='getSelectEvent' data-kind="3">
+        <text class="{{selectTab==3?'select-text-choose':'select-text'}}" >销量最高</text>
+      </view>
+    </view>
+    
+    <template is="goodsSingItem" />
+    <template is="goodsSingItem" />
+    <template is="goodsSingItem" />
+    <template is="goodsSingItem" />
+    <template is="goodsSingItem" />
+    <template is="goodsSingItem" />
+    <template is="goodsSingItem" />
+  </scroll-view>
+  <block wx:if="{{isShowModal}}">
+    <view class="select-more-view-modal" style="height:{{modalHeight}}px" bindtap='closeModalEvent' catchtouchmove='true'>
+      <view class="select-more-view" bindtap='loadingShopList'>
+        <text class="select-more-text select-more-choose-text">综合排序</text>
+        <image class="select-more-image" src="/images/select_choose.png" />
+      </view>
+      <view class="select-more-view" bindtap='loadingShopList'>
+        <text class="select-more-text">评分最高</text>
+      </view>
+      <view class="select-more-view" bindtap='loadingShopList'>
+        <text class="select-more-text">配送最快</text>
+      </view>
+      <view class="select-more-view" bindtap='loadingShopList'>
+        <text class="select-more-text">配送最低</text>
+      </view>
+    </view>
+  </block>
+</view>

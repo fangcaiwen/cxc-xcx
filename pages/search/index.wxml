@@ -1,0 +1,71 @@
+<!--pages/search/index.wxml-->
+<import src="../../template/index.wxml" />
+<view class="page-container-nocenter">
+  <view class="search-view">
+    <template is="searchAreaInput" data="{{searchText}}" />
+  </view>
+  <block wx:if="{{searchText.length==0}}">
+    <view class="search-page-view">
+      <text class="search-top-text">热门搜索</text>
+      <view class="search-hot-sign-view">
+        <view class="search-hot-sign-text-view" data-keyword="汉堡" bindtap='searchEvent'>
+          <text class="search-hot-sign-text">汉堡</text>
+        </view>
+        <view class="search-hot-sign-text-view" data-keyword="炸鸡" bindtap='searchEvent'>
+          <text class="search-hot-sign-text">炸鸡</text>
+        </view>
+        <view class="search-hot-sign-text-view" data-keyword="烧烤" bindtap='searchEvent'>
+          <text class="search-hot-sign-text">烧烤</text>
+        </view>
+        <view class="search-hot-sign-text-view" data-keyword="必胜客" bindtap='searchEvent'>
+          <text class="search-hot-sign-text">必胜客</text>
+        </view>
+        <view class="search-hot-sign-text-view" data-keyword="肯德基"  bindtap='searchEvent'>
+          <text class="search-hot-sign-text">肯德基</text>
+        </view>
+        <view class="search-hot-sign-text-view" data-keyword="鸡翅"  bindtap='searchEvent'>
+          <text class="search-hot-sign-text">鸡翅</text>
+        </view>
+      </view>
+    </view>
+  </block>
+  <block wx:if="{{searchText.length>0}}">
+    <view class="select-click-view">
+      <view class="select-item-view" bindtap='getSelectEvent' data-kind="1">
+        <text class="select-text-choose">综合排序</text>
+        <image src="/images/angle_down.png" class="select-image" />
+      </view>
+      <view class="select-item-view" bindtap='getSelectEvent' data-kind="2">
+        <text class="select-text">距离最近</text>
+      </view>
+      <view class="select-item-view" bindtap='getSelectEvent' data-kind="3">
+        <text class="select-text">销量最高</text>
+      </view>
+    </view>
+    <scroll-view scroll-y scroll-with-animation="true" style="height:{{windowHeight}}px;">
+      <template is="goodsSingItem" />
+      <template is="goodsSingItem" />
+      <template is="goodsSingItem" />
+      <template is="goodsSingItem" />
+      <template is="goodsSingItem" />
+      <template is="goodsSingItem" />
+    </scroll-view>
+    <block wx:if="{{isShowModal}}">
+      <view class="select-more-view-modal" style="height:{{modalHeight}}px" bindtap='closeModalEvent'>
+        <view class="select-more-view" bindtap='loadingShopList'>
+          <text class="select-more-text select-more-choose-text">综合排序</text>
+          <image class="select-more-image" src="/images/select_choose.png" />
+        </view>
+        <view class="select-more-view" bindtap='loadingShopList'>
+          <text class="select-more-text">评分最高</text>
+        </view>
+        <view class="select-more-view" bindtap='loadingShopList'>
+          <text class="select-more-text">配送最快</text>
+        </view>
+        <view class="select-more-view" bindtap='loadingShopList'>
+          <text class="select-more-text">配送最低</text>
+        </view>
+      </view>
+    </block>
+  </block>
+</view>
