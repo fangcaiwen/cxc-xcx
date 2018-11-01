@@ -5,7 +5,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    selectTab: "1",
   },
   // 点击商品单项事件
   clickSingleItemEvent: function (e) {

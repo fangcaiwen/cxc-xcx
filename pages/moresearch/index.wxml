@@ -3,14 +3,14 @@
 <view class="page-container-nocenter">
    <view class="select-click-view">
       <view class="select-item-view" bindtap='getSelectEvent' data-kind="1">
-        <text class="select-text-choose" >综合排序</text>
+        <text class="{{selectTab==1?'select-text-choose':'select-text'}}" >综合排序</text>
         <image src="/images/angle_down.png" class="select-image" />
       </view>
       <view class="select-item-view" bindtap='getSelectEvent' data-kind="2">
-        <text class="select-text" >距离最近</text>
+        <text class="{{selectTab==2?'select-text-choose':'select-text'}}" >距离最近</text>
       </view>
       <view class="select-item-view" bindtap='getSelectEvent' data-kind="3">
-        <text class="select-text" >销量最高</text>
+        <text class="{{selectTab==3?'select-text-choose':'select-text'}}" >销量最高</text>
       </view>
     </view>
     <scroll-view scroll-y   scroll-with-animation="true" style="height:{{windowHeight}}px;" >

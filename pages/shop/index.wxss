@@ -48,9 +48,9 @@
   height:240rpx;
 }
 swiper-item image {
-  width: 100%;
-  display: inline-block;
+  width: 96%;
   height:240rpx;
+  margin-left: 2%;
 }
 
 .home-btn-lunbo-view{
