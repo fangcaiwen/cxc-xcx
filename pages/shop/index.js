@@ -6,9 +6,9 @@ Page({
    */
   data: {
     imgUrls: [
-      'http://pfziknqzb.bkt.clouddn.com/banner@3x.png',
-      'http://pfziknqzb.bkt.clouddn.com/banner2@3x.png',
-      'http://pfziknqzb.bkt.clouddn.com/banner3@3x.png'
+      'https://img.manmi.com/n/3,07b253f8824acd',
+      'https://img.manmi.com/n/1,07b2572418e090',
+      'https://img.manmi.com/n/1,07b25538eefa8f'
     ],
     homeBtns:[
       {},
