@@ -25,7 +25,7 @@ Page({
   // 点击管理地址
   clickToAddress:() => {
     wx.navigateTo({
-      url: '../address/index',
+      url: '../houseload/index',
     });
   },
 

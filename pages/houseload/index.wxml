@@ -1,0 +1,41 @@
+<!--pages/houseload/index.wxml-->
+<view class="page-container-nocneter">
+  <view class="row-view">
+    <text class="row-title">本金</text>
+    <input placeholder='单位：元' class="row-content" type="number" bindinput="listenCaptialInput" value="{{capitalValue}}" ></input>
+  </view>
+  <view class="row-view">
+    <text class="row-title">利率</text>
+    <input placeholder='单位：100%' class="row-content" type="number" value="{{ratioValue}}" bindinput="listenRatioValueInput"></input>
+  </view>
+  <view class="row-view">
+    <text class="row-title">贷款年限</text>
+    <input placeholder='单位：年' class="row-content" type="number" value="{{monthValue}}" bindinput="listenMonthValueInput"></input>
+  </view>
+  <view class="row-view">
+    <text class="row-title">起息日</text>
+    <input placeholder='例：2018-04-27' class="row-content" type="text" value="{{startDate}}" bindinput="listenStartDateInput"></input>
+  </view>
+  <view style="display:flex">
+    <button type="defaule" class="big-button button-other" bindtap='captialBtnEvent' >计算本金利息</button>
+    <button type="defaule" class="big-button button-other" bindtap='monthPayBtnEvent' >计算月供明细</button>
+  </view>
+  <scroll-view scroll-y style="height:500px;margin-top:10px">
+    <view class="item-view-style" wx:for="{{list}}" wx:for-item = "mlabel" wx:key="key">
+      <view class="item-view-small-style">
+        <text>{{mlabel.index}}</text><text>已还本金:{{mlabel.captialData}}</text>
+      </view>
+      <view class="item-view-small-style">
+        <text>已还本息:{{mlabel.ratioData}}</text><text>剩余本金:{{mlabel.reCaptialMoney}}</text>
+      </view>
+    </view>
+    <view class="item-view-style" wx:for="{{list2}}" wx:for-item = "mlabel" wx:key="key">
+      <view class="item-view-small-style">
+        <text>{{mlabel.index}}</text><text>需还本金:{{mlabel.captialData}}</text>
+      </view>
+      <view class="item-view-small-style">
+        <text>需还本息:{{mlabel.ratioData}}</text><text>当期月供:{{mlabel.reCaptialMoney}}</text>
+      </view>
+    </view>
+  </scroll-view>
+</view>
