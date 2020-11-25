@@ -6,7 +6,7 @@
   </view>
   <view class="row-view">
     <text class="row-title">利率</text>
-    <input placeholder='单位：100%' class="row-content" type="number" value="{{ratioValue}}" bindinput="listenRatioValueInput"></input>
+    <input placeholder='单位：100%' class="row-content" type="text" value="{{ratioValue}}" bindinput="listenRatioValueInput"></input>
   </view>
   <view class="row-view">
     <text class="row-title">贷款年限</text>

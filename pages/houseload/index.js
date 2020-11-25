@@ -6,10 +6,10 @@ Page({
    * 页面的初始数据
    */
   data: {
-    capitalValue:'410000'*1,
-    ratioValue:'5.39'/100,
-    monthValue:'30'*12,
-    startDate:'2018-04-27',
+    capitalValue:'',
+    ratioValue:'',
+    monthValue:'',
+    startDate:'',
     list:[],
     list2:[]
   },
